@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "Destek";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ======= Contact Section ======= -->
+
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="col-md-6" style="margin:auto">
+            <div class="row">
+                <div class="section-title">
+
+
+                    <div class="text-center" style="margin-top:10px; margin-bottom:20px;"><h2 style="color: dimgrey">DESTEK TALEP FORMU</h2></div><br>
+                    <p style="font-weight: 600;margin-right:10px;text-align:center;margin:auto">
+                        <i class="bi bi-envelope-fill" aria-hidden="true" style="font-size: 30px;color: #aad4c8"></i><br>
+                        <a href="mailto:bilgi@sanalfatura.com" style="font-size: 30px;text-align: center; color: #88a99f">bilgi@sanalfatura.com</a>  <br><br><span style="font-size: 15px; color:dimgray">Sistem hakkında her türlü bilgi, istek ve önerilerinizi form ile bize gönderebilirsiniz.   <br>Operatörlerimiz en kısa zamanda sizinle iletişime geçecektir.</span>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="Ad" class="form-control" id="Ad" style="color:#5786b4" placeholder="Adınız Soyadınız:" data-rule="" data-msg="Lütfen Boş Bırakmayınız.">
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="Mail" id="Mail" style="color:#5786b4" placeholder="E-Mail Adresiniz:" data-rule="email" data-msg="Lütfen Boş Bırakmayınız.">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="Telefon" class="form-control" id="Telefon" style="color:#5786b4" placeholder="Telefon:" data-rule="minlen:4" data-msg="Lütfen Boş Bırakmayınız.">
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        <input type="text" class="form-control" name="Konu" id="Konu" style="color:#5786b4" placeholder="Konu:" data-rule="text" data-msg="Lütfen Boş Bırakmayınız.">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 form-group mt-3 mt-md-0">
+                        <textarea id="Mesaj" class="form-control" name="Mesaj" rows="3" cols="50" style="color:#5786b4" placeholder="İstek / Öneri" data-msg="Lütfen Boş Bırakmayınız."></textarea>
+
+                    </div>
+                </div>
+                <!--
+        <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu:" required>
+        </div>
+
+            -->
+                <!--<div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+            -->
+                <div class="text-center" style="margin-top:30px">
+                    <button type="button" class="btn btn-success">Gönder</button>
+                </div>
+            </form>
+            <div class="row contact-info">
+                <h2 style="margin-top:40px; color: dimgray">İLETİŞİM</h2>
+                <div class="col-md-6">
+                    <div class="contact-email">
+                        <i class="bi bi-envelope" style="color: #aad4c8"></i>
+                        <h3 style="color: #88a99f">Email Adresimiz</h3>
+                        <p><a href="mailto:bilgi@sanalfatura.com" ; style="color:dimgray">bilgi@sanalfatura.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-email">
+                        <i class="bi bi-phone" style="color: #aad4c8"></i>
+                        <h3 style="color: #88a99f">Telefon</h3>
+                        <p><a href="" ; style="color:dimgray">0850 611 06 62</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--
+      <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                  <div class="col-md-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Adınız Soyadınız:" data-rule="minlen:4" data-msg="Lütfen Boş Bırakmayınız.">
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail Adresiniz:" data-rule="email" data-msg="Lütfen Boş Bırakmayınız.">
+                  </div>
+              </div>
+              <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu:" required>
+              </div>
+              <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Mesajınız:" required></textarea>
+              </div>
+              <!--<div class="my-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message has been sent. Thank you!</div>
+    </div>
+        -->
+
+
+        </div>
+    </div>
+</section><!-- End Contact Section -->

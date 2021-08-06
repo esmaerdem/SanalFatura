@@ -1,0 +1,556 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #353535;
+}
+
+a {
+    text-decoration: none;
+    color: #aad4c8;
+}
+
+    a:hover {
+        color: #aad4c8;
+        text-decoration: none;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    height: 70px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #fff;
+}
+
+    #header .logo h1 {
+        font-size: 28px;
+        margin: 0;
+        padding: 11px 0;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: "Poppins", sans-serif;
+    }
+
+        #header .logo h1 a, #header .logo h1 a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    #header .logo img {
+        padding: 0;
+        margin: 0;
+        max-height: 120px;
+    }
+
+.scrolled-offset {
+    margin-top: 70px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+    padding: 0;
+}
+
+    .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    .navbar li {
+        position: relative;
+    }
+
+    .navbar a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: #353535;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+        .navbar a i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 0px;
+        }
+
+        .navbar a:hover, .navbar .active, .navbar li:hover > a {
+            color: #72ad9c;
+        }
+
+    .navbar .cta-btn {
+        color: #353535;
+        background-color: #aad4c8;
+        border: 0.5px solid white;
+        padding: 10px;
+    }
+
+        .navbar .cta-btn:hover {
+            color: #fff;
+        }
+
+
+    .navbar .getstarted {
+        background: #aad4c8;
+        padding: 8px 20px;
+        margin-left: 30px;
+        border-radius: 4px;
+        color: #fff;
+    }
+
+        .navbar .getstarted:hover {
+            color: #fff;
+            background: #aad4c8;
+        }
+
+    .navbar .dropdown ul {
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: calc(100% + 30px);
+        margin: 0;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        background: #353535;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        transition: 0.3s;
+        border-radius: 4px;
+    }
+
+        .navbar .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar .dropdown ul a {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: none;
+            color: #353535;
+        }
+
+            .navbar .dropdown ul a i {
+                font-size: 12px;
+            }
+
+            .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+                color: #aad4c8;
+            }
+
+    .navbar .dropdown:hover > ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+    }
+
+    .navbar .dropdown .dropdown ul {
+        top: 0;
+        left: calc(100% - 30px);
+        visibility: hidden;
+    }
+
+    .navbar .dropdown .dropdown:hover > ul {
+        opacity: 1;
+        top: 0;
+        left: 100%;
+        visibility: visible;
+    }
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+
+    .navbar .dropdown .dropdown:hover > ul {
+        left: -100%;
+    }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+    color: #353535;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(28, 28, 28, 0.1);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+    .navbar-mobile .mobile-nav-toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .navbar-mobile ul {
+        display: block;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 0;
+        border-radius: 8px;
+        background-color: #353535;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+
+    .navbar-mobile a {
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+        .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+            color: #fff;
+        }
+
+    .navbar-mobile .getstarted {
+        margin: 15px;
+    }
+
+    .navbar-mobile .dropdown ul {
+        position: static;
+        display: none;
+        margin: 10px 20px;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 1;
+        visibility: visible;
+        background: #353535;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+            .navbar-mobile .dropdown ul a i {
+                font-size: 12px;
+            }
+
+            .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+                color: #353535;
+            }
+
+    .navbar-mobile .dropdown > .dropdown-active {
+        display: block;
+    }
+
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .contact .contact-info i {
+        font-size: 48px;
+        display: inline-block;
+        margin-bottom: 10px;
+        color: #aad4c8;
+    }
+
+    .contact .contact-info address, .contact .contact-info p {
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    .contact .contact-info h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #999;
+    }
+
+    .contact .contact-info a {
+        color: #000;
+    }
+
+        .contact .contact-info a:hover {
+            color: #aad4c8;
+        }
+
+.contact .contact-address, .contact .contact-phone, .contact .contact-email {
+    margin-bottom: 20px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+    .contact .php-email-form .error-message br + br {
+        margin-top: 25px;
+    }
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #aad4c8;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+    .contact .php-email-form .loading:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid #aad4c8;
+        border-top-color: #eee;
+        -webkit-animation: animate-loading 1s linear infinite;
+        animation: animate-loading 1s linear infinite;
+    }
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+    .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+        border-color: #aad4c8;
+    }
+
+.contact .php-email-form button[type="submit"] {
+    background: #aad4c8;
+    border: 0;
+    padding: 10px 30px 12px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+    .contact .php-email-form button[type="submit"]:hover {
+        background: #aad4c8;
+    }
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .contact .contact-phone {
+    }
+
+    .contact .contact-address, .contact .contact-phone, .contact .contact-email {
+        padding: 20px 0;
+    }
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: url("../img/3.jpg") center center no-repeat;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+}
+
+    #footer::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(15, 15, 15, 0.75);
+        z-index: 1;
+    }
+
+    #footer .footer-top {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 50px 0;
+    }
+
+        #footer .footer-top h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            font-family: "Poppins", sans-serif;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        #footer .footer-top p {
+            font-size: 15px;
+            font-style: italic;
+            margin: 30px 0 0 0;
+            padding: 0;
+        }
+
+        #footer .footer-top .footer-newsletter {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+            #footer .footer-top .footer-newsletter form {
+                background: #fff;
+                padding: 6px 10px;
+                position: relative;
+                border-radius: 50px;
+                box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+                text-align: left;
+            }
+
+                #footer .footer-top .footer-newsletter form input[type="email"] {
+                    border: 0;
+                    padding: 4px 8px;
+                    width: calc(100% - 100px);
+                }
+
+                #footer .footer-top .footer-newsletter form input[type="submit"] {
+                    position: absolute;
+                    top: 0;
+                    right: -1px;
+                    bottom: 0;
+                    border: 0;
+                    background: none;
+                    font-size: 16px;
+                    padding: 0 20px;
+                    background: #aad4c8;
+                    color: #fff;
+                    transition: 0.3s;
+                    border-radius: 50px;
+                    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+                }
+
+                    #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
+                        background: #aad4c8;
+                    }
+
+        #footer .footer-top .social-links {
+            margin-top: 30px;
+        }
+
+            #footer .footer-top .social-links a {
+                font-size: 18px;
+                display: inline-block;
+                background: #aad4c8;
+                color: #fff;
+                line-height: 1;
+                padding: 8px 0;
+                margin-right: 4px;
+                border-radius: 50%;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+                transition: 0.3s;
+            }
+
+                #footer .footer-top .social-links a:hover {
+                    background: #75a239;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+    #footer .footer-bottom {
+        border-top: 1px solid #282828;
+        z-index: 2;
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #footer .copyright {
+        text-align: center;
+        float: left;
+    }
+
+    #footer .credits {
+        float: right;
+        text-align: center;
+        font-size: 13px;
+    }
